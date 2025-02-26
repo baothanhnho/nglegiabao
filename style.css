@@ -1,10 +1,10 @@
 body{
     margin: 0;
     padding: 0;
-    background: url("https://images.template.net/123491/chinese-new-year-design-background-7l40b.jpg");
+    /* background: url("https://images.template.net/123491/chinese-new-year-design-background-7l40b.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-size: cover; */
+    min-height: 100vh;
     position: relative;
     font-family: Helvetica;
     font-weight: bold;
@@ -20,7 +20,6 @@ a:visited {
 }
 
 .menu{
-    position: fixed;
     width: 100%;
     flex-wrap: wrap;
     display: flex;
@@ -62,158 +61,125 @@ a:visited {
     height: 50px;
 }
 
-.shoes{
+.main-contents{
+    background-color: #E0E0E0;
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 12.5%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
-}
-.shoe{
-    text-align: center;
-    border:0px solid;
-    border-radius: 20px;
-    width: 200px;
-    box-shadow: 25px 20px 15px rgba(0,0,0,0.5);
-    background-color: white;
-    transition: transform ease 0.5s;
+
 }
 
-#shoe1{
-    margin-left: 80px;
+
+.main{
+    position: relative;
+    height: 100vh;
 }
 
-#shoe2{
-    margin-left: 80px;
-}
 
-#shoe3{
-    margin-left: 80px;
-}
 
-#snake{
-    margin-left: 80px;
-    background-color:#40100c;
-    height: 220px;
-    width: auto;
-}
-
-.shoe:hover{
-    
-    transform: scale(1.1);
-    
-}
-.shoe a{
-    font-size: 20px;
-}
-
-.shoe:hover p{
-    color: purple;
-    text-decoration: underline;
-}
-.shoe img{
+.main-contents div{
     width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 200px;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.shoe h1{
-    font-size: 20px;
+.main-contents div h2{
+    margin-left: 7px;
 }
 
-.shoe p{
-    font-weight: bold;
+.main-contents hr{
+    width: 100%;
 }
 
-.buy{
-    padding: 5px;
-    margin: 5px 75px;
-    border-radius: 30px;
+.main-content{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
 }
 
-.buy a{
-    color: black;
-    font-size: 18px;
+.main-content a{
+    margin-left: 10px;
     text-decoration: none;
-    font-family: 'Merriweather', serif;
-}
-
-
-footer{
-    text-align: center;
-    background-color: white;
-    bottom: 0;
-    position: static;
-    height: 25px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer p{
-    color: gray;
-    
-}
-
-.Adidas{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.Adidas img{
-    width: 850px;
-    height: 750px;
+    color: rgb(70, 70, 252);
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 .text{
-    margin-top: 50px;
-    text-align: center;
-    width: 30%;
-    padding-left: 50px;
-    /* display: flex;
-    justify-content: right;
-    flex-direction: column;
-    align-items: center; */
+    width: 75%;
+    margin-left: 12.5%;
+    font-size: 22px;
+
 }
 
-.text h1{
-    font-size: 35px;
-    color: rgb(82, 8, 63);
-}
-
-.text select{
-    width: 52px;
-}
-
-.text a{
-    margin-top: 25px;
-    background-color: purple;
-    width: 85px;
-    border-radius: 25px;
-    font-size: 30px;
-    color: black;
-    text-decoration: none;
-    transition: transform ease 0.5s;
+.contents{
+    position: relative;
+    margin-bottom: 50px;
 }
 
 
-.text a:hover{
-    transform: scale(1.2);
+
+
+
+
+.text img{
+    width: 50%;
+    margin-left: 25%;
+
 }
 
-
-.Info ul{
+.imgs{
+    width: 65%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
- 
-}
-.Info ul li{
-    font-size: 18px;
+    justify-content: space-evenly;
 }
 
-.Info h1{
-    color: rgb(58, 2, 44);
-    font-size: 30px;
+.imgs img{
+    width: 40%;
+}
+
+.title{
+    margin-left: 12.5%;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+
+}
+
+/* .content img{
+    width: 50%;
+} */
+
+
+
+
+
+.footer{
+    height: 7vh;
+    
+    text-align: center;
+    background-color: lightgray;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+
+.footer p{
+    width: 100%;
+    color: gray;
+    
 }
