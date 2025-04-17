@@ -1,216 +1,261 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kỳ Thi THPT - Lựa Chọn Môn Thi</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Kế hoạch cải thiện kỳ thi ĐGNL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ffc107;
+      --bg: #f4f7fa;
+      --card-bg: #ffffffcc;
+      --text: #2c3e50;
+      --highlight: #007bff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background: linear-gradient(to right, #f7f8fc, #e3eaf5);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeInTop 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 40px;
+      animation: slideUpFade 1s ease forwards;
+      opacity: 0;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.3s; }
+    .card:nth-child(2) { animation-delay: 0.6s; }
+    .card:nth-child(3) { animation-delay: 0.9s; }
+
+    h2 {
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 16px 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    th {
+      background-color: #f0f4ff;
+      color: var(--text);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 15px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-top: 25px;
+      animation: zoomIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.02);
+    }
+
+    .note {
+      font-size: 13px;
+      font-style: italic;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      th, td {
+        font-size: 13px;
+      }
+    }
+
+    /* === ANIMATION KEYFRAMES === */
+    @keyframes slideUpFade {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInTop {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🌟 Kế Hoạch Chuẩn Bị Kỳ Thi THPT 2025 🌟</h1>
-    </header>
 
-    <section id="mon-thi">
+  <header>
+    <h1>Kế hoạch cải thiện Kỳ thi Đánh giá Năng lực - Đợt 2</h1>
+    <p>Tổng hợp kết quả đợt 1, phân tích nguyên nhân và xây dựng chiến lược luyện thi hiệu quả.</p>
+  </header>
 
-        <h2>📌 Danh Sách Môn Thi THPT</h2>
-        <table>
-            <tr>
-                <th>STT</th>
-                <th>Môn thi</th>
-                <th>Thời gian thi (phút)</th>
-                <th colspan="3">Số lượng câu hỏi</th>
-                <th>Lựa chọn</th>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Phần I</th>
-                <th>Phần II</th>
-                <th>Phần III</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Toán</td>
-                <td>90</td>
-                <td>12</td>
-                <td>4</td>
-                <td>6</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ngữ Văn</td>
-                <td>120</td>
-                <td colspan="3">Tự luận</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Vật lí</td>
-                <td>50</td>
-                <td>18</td>
-                <td>4</td>
-                <td>6</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Hóa học</td>
-                <td>50</td>
-                <td>18</td>
-                <td>4</td>
-                <td>6</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Sinh học</td>
-                <td>50</td>
-                <td>18</td>
-                <td>4</td>
-                <td>6</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Địa lí</td>
-                <td>50</td>
-                <td>18</td>
-                <td>4</td>
-                <td>6</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Lịch sử</td>
-                <td>50</td>
-                <td>18</td>
-                <td>4</td>
-                <td>6</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Giáo dục kinh tế & pháp luật</td>
-                <td>50</td>
-                <td>24</td>
-                <td>6</td>
-                <td>0</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Tin học</td>
-                <td>50</td>
-                <td>24</td>
-                <td>4</td>
-                <td>0</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Công nghệ</td>
-                <td>50</td>
-                <td>24</td>
-                <td>4</td>
-                <td>0</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>10.1</td>
-                <td>Công nghệ thông tin</td>
-                <td>50</td>
-                <td>24</td>
-                <td>4</td>
-                <td>0</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>10.2</td>
-                <td>Công nghệ nông nghiệp</td>
-                <td>50</td>
-                <td>24</td>
-                <td>4</td>
-                <td>0</td>
-                <td>❌</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>Ngoại ngữ</td>
-                <td>50</td>
-                <td>40</td>
-                <td>0</td>
-                <td>0</td>
-                <td>❌</td>
-            </tr>
-        </table>
+  <div class="container">
 
+    <div class="card">
+      <h2>1. Kết quả & Mục tiêu</h2>
+      <table>
+        <tr>
+          <th>Phần thi</th>
+          <th>Kết quả đợt 1</th>
+          <th>Mức độ tự tin</th>
+          <th>Mục tiêu đợt 2</th>
+        </tr>
+        <tr>
+          <td>Sử dụng ngôn ngữ</td>
+          <td>400/600</td>
+          <td>Trung bình</td>
+          <td>500/600</td>
+        </tr>
+        <tr>
+          <td>Toán học</td>
+          <td>150/300</td>
+          <td>Cao</td>
+          <td>300/300</td>
+        </tr>
+        <tr>
+          <td>Suy luận khoa học</td>
+          <td>220/300</td>
+          <td>Cao</td>
+          <td>250/300</td>
+        </tr>
+      </table>
+    </div>
 
+    <div class="card">
+      <h2>2. Phân tích lý do cần cải thiện</h2>
+      <ul>
+        <li><strong>Sử dụng ngôn ngữ:</strong> Kỹ năng đọc hiểu chưa chắc chắn, chính tả còn sai và vốn từ chưa phong phú.</li>
+        <li><strong>Toán học:</strong> Cần củng cố lại nền tảng toán học và luyện phản xạ giải nhanh các dạng toán.</li>
+        <li><strong>Suy luận khoa học:</strong> Cần tăng tốc độ đọc, phân tích biểu đồ để đạt điểm tối đa.</li>
+      </ul>
+      <div class="image-box">
+        <img src="file:///E:/nh%C3%A1p/nh%C3%A1p.webp" alt="AI Image">
+        <p class="note">Minh họa: Tư duy giải quyết vấn đề (ảnh AI)</p>
+      </div>
+    </div>
 
-    </section>
+    <div class="card">
+      <h2>3. Bảng kế hoạch cải thiện</h2>
+      <table>
+        <tr>
+          <th>Phần thi</th>
+          <th>Điểm mục tiêu</th>
+          <th>Mức độ khả thi</th>
+          <th>Kế hoạch cải thiện</th>
+        </tr>
+        <tr>
+          <td>Sử dụng ngôn ngữ</td>
+          <td>500/600</td>
+          <td>Cao</td>
+          <td>
+            <strong>Tiếng Việt:</strong> Luyện đọc hiểu và học vững lịch sử văn học, ôn chính tả, mở rộng vốn từ.<br>
+            <strong>Tiếng Anh:</strong> Luyện đọc hiểu và mở rộng vốn từ vựng, ngữ pháp.
+          </td>
+        </tr>
+        <tr>
+          <td>Toán học</td>
+          <td>300/300</td>
+          <td>Trung bình</td>
+          <td>Giải đề mẫu, học lại công thức cơ bản, làm lại đề thi đợt 1 và rút kinh nghiệm.</td>
+        </tr>
+        <tr>
+          <td>Suy luận khoa học</td>
+          <td>250/300</td>
+          <td>Cao</td>
+          <td>Tăng tốc độ đọc hiểu và phân tích biểu đồ, luyện các dạng bài về logic và nắm vững kiến thức cơ bản các môn.</td>
+        </tr>
+      </table>
+    </div>
 
-    <section id="ly-do">
-        <h2>🎯 Lý Do Lựa Chọn</h2>
-        <p><strong>📌 Toán:</strong> Môn bắt buộc.</p>
-        <p><strong>📌 Ngữ Văn:</strong> Môn bắt buộc.</p>
-        <p><strong>📌 Vật lí:</strong> Môn thế mạnh và có ứng dụng thực tiễn cao, đồng thời là môn bắt buộc để xét tuyển vào ngành em thích.</p>
-        <p><strong>📌 Hoá học:</strong> Giống môn lí.</p>
-    </section>
-
-    <section id="muc-tieu">
-        <h2>🏆 Bảng Điểm Mục Tiêu</h2>
-        <h2>📌 Danh Sách Môn Thi THPT</h2>
-        <table>
-            <tr>
-                <th>STT</th>
-                <th>Môn thi</th>
-                <th>Điểm mục tiêu</th>
-                <th>Mức độ khả thi</th>
-                <th>Kế hoạch cải thiện</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Toán</td>
-                <td>10</td>
-                <td>Thấp</td>
-                <td>Cày đề</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ngữ Văn</td>
-                <td>10</td>
-                <td>Thấp</td>
-                <td>Đọc thêm tác phẩm văn học</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Vật lí</td>
-                <td>10</td>
-                <td>Thấp</td>
-                <td>Cày đề</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Hóa học</td>
-                <td>10</td>
-                <td>Thấp</td>
-                <td>Cày đề</td>
-            </tr>
-            
-        </table>
-    </section>
-
-    <section id="hinh-anh" style="text-align: center;">
-        <h2>🖼 Hình Ảnh Minh Họa</h2>
-        <img src="nháp.webp" alt="Học sinh ôn thi THPT">
-        <p><i>Ảnh tạo bằng AI (DALL-E). Prompt: "A Vietnamese student studying for a national exam with books and a laptop, in a focused atmosphere."</i></p>
-    </section>
-
-    <footer>
-        <p>Tạ Như Trung Tín & Nguyễn Lê Gia Bảo</p>
-    </footer>
+  </div>
 </body>
 </html>
